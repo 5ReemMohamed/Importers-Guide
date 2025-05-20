@@ -70,7 +70,7 @@ a:hover {
 }
 
 .btn {
-  padding: 0.625rem 1.5rem;
+  padding: 0.625rem .8rem;
   border-radius: var(--border-radius);
   font-weight: 500;
   transition: var(--transition);
