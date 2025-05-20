@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title data-ar="دليل المستوردين" data-en="Importers Guide">دليل المستوردين</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
+<!-- Header -->
+<header id="header" class="header fixed-top">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid container-lg">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-text" data-en="Importers" data-ar="دليل"> دليل</span>
+        <span class="brand-text-accent" data-en="Guide" data-ar="المستوردين">المستوردين</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto d-flex gap-3 gap-lg-2 mt-3 mt-lg-0 py-3">
+          <li class="nav-item"><a class="nav-link active" href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing" data-en="Pricing" data-ar="الأسعار">الأسعار</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center py-3 gap-2 mt-3 mt-lg-0">
+            <a class="btn btn-danger pricing-btn" href="#pricing" data-en="Get Access" data-ar="اشترك الان">اشترك الان</a>
+            <button class="btn  ms-lg-3 lang" id="langSwitch" data-lang="ar">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+      <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6 hero-text fade-in">
+          <h1 data-ar="بوابتك إلى عالم الصناعة الصينية" data-en="Your Gateway to Chinese Manufacturing">بوابتك إلى عالم الصناعة الصينية</h1>
+          <p class="lead" data-ar="احصل على إمكانية الوصول الحصري إلى أكثر من ١٩٢٠٠ مصنعًا معتمدًا عبر ٣٢ قطاعًا صناعيًا، وحلول شحن شاملة، وإرشادات استيراد من الخبراء." data-en="Gain exclusive access to over 19,200 verified factories across 32 industrial sectors, comprehensive shipping solutions, and expert import guidance.">احصل على إمكانية الوصول الحصري إلى أكثر من ١٩٢٠٠ مصنعًا معتمدًا عبر ٣٢ قطاعًا صناعيًا، وحلول شحن شاملة، وإرشادات استيراد من الخبراء.</p>
+          <div class="hero-btns d-flex gap-3 mt-5">
+            <a href="#pricing" class="btn btn-danger btn-lg" data-ar="ابدأ الان" data-en="Get Started">ابدأ الان</a>
+            <a href="#services" class="btn btn-outline-light btn-lg ms-3" data-ar="اعرف المزيد" data-en="Learn More">اعرف المزيد</a>
+          </div>
+          <div class="hero-stats mb-3 mb-lg-0">
+            <div class="stat-item">
+              <span class="stat-number" data-ar="٣٢" data-en="32">٣٢</span>
+              <span class="stat-text" data-ar="القطاعات الصناعية" data-en="Industry Sectors">القطاعات الصناعية</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-ar="١٩ ألفًا+" data-en="19k+">١٩ ألفًا+</span>
+              <span class="stat-text" data-ar="المصانع التي تم التحقق منها" data-en="Verified Factories">المصانع التي تم التحقق منها</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-ar="١٠" data-en="10">١٠</span>
+              <span class="stat-text" data-ar="شركات الشحن" data-en="Shipping Companies">شركات الشحن</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-image">
+          <img src="images/hero.jpeg" alt="Global Trade Shipping" class="img-fluid rounded-4 shadow-lg">
+        </div>
+      </div>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+   <!-- Services Section -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-header text-center ">
+        <h2 data-ar="خدماتنا المميزة" data-en="Our Premium Services">خدماتنا المميزة</h2>
+        <p data-ar="احصل على إمكانية الوصول الفوري إلى مجموعتنا الشاملة من الأدوات والموارد بعد الدفع." data-en="Gain immediate access to our comprehensive suite of tools and resources after payment." class="section-subtext">احصل على إمكانية الوصول الفوري إلى مجموعتنا الشاملة من الأدوات والموارد بعد الدفع.</p>
+      </div>
+      <div class="row g-4" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="service-card fade-in" data-delay="0.1s">
+            <div class="service-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="service-title" data-ar="دليل المصنع" data-en="Factory Directory">دليل المصنع</h3>
+            <p data-en="Access to 32 industrial sectors, each with 600+ factories. Complete with verified addresses, contact numbers, and websites." data-ar="الوصول إلى ٣٢ قطاعًا صناعيًا، يضم كل منها أكثر من ٦٠٠ مصنع. يشمل عناوين وأرقام اتصال ومواقع إلكترونية موثقة.">الوصول إلى ٣٢ قطاعًا صناعيًا، يضم كل منها أكثر من ٦٠٠ مصنع. يشمل عناوين وأرقام اتصال ومواقع إلكترونية موثقة.</p>
+            <ul class="service-features">
+              <li data-ar="أكثر من ١٩٢٠٠ مصنع تم التحقق منه" data-en="19,200+ verified factories">
+                <i class="fas fa-check"></i> أكثر من ١٩٢٠٠ مصنع تم التحقق منه
+              </li>
+              <li data-ar="٣٢ فئة صناعية" data-en="32 industrial categories"><i class="fas fa-check"></i> ٣٢ فئة صناعية</li>
+              <li data-ar="معلومات الاتصال التفصيلية" data-en=" Detailed contact information"><i class="fas fa-check"></i> معلومات الاتصال التفصيلية</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="service-card fade-in" data-delay="0.2s">
+            <div class="service-icon">
+              <i class="fas fa-ship"></i>
+            </div>
+            <h3 class="service-title" data-en="Shipping Directory" data-ar="دليل الشحن">دليل الشحن</h3>
+            <p data-ar="دليل لأفضل ١٠ شركات شحن دولية تُعنى بكل شيء، من استلام الشحنة من المصنع إلى باب منزلك." data-en="Directory of top 10 international shipping companies that handle everything from factory pickup to your doorstep.">دليل لأفضل ١٠ شركات شحن دولية تُعنى بكل شيء، من استلام الشحنة من المصنع إلى باب منزلك.</p>
+            <ul class="service-features">
+              <li data-ar="حلول شحن شاملة" data-en="End-to-end shipping solutions"><i class="fas fa-check"></i> حلول شحن شاملة</li>
+              <li data-ar="شاملة التخليص الجمركي" data-en="Customs clearance included"><i class="fas fa-check"></i>شاملة التخليص الجمركي</li>
+              <li data-ar="مقارنة أسعار تنافسية" data-en="Competitive rates comparison"><i class="fas fa-check"></i> مقارنة أسعار تنافسية</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="service-card fade-in" data-delay="0.3s">
+            <div class="service-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3 class="service-title" data-en="Cost Calculator" data-ar="حاسبة التكاليف">حاسبة التكاليف</h3>
+            <p data-ar="حاسبة تكاليف استيراد متطورة لتحديد تكاليف الشحن بدقة بناءً على نوع المنتج ووزنه ووجهته." data-en="Advanced import cost calculator to determine exact shipping costs based on product type, weight, and destination.">حاسبة تكاليف استيراد متطورة لتحديد تكاليف الشحن بدقة بناءً على نوع المنتج ووزنه ووجهته.</p>
+            <ul class="service-features">
+              <li data-ar="تقدير دقيق للتكلفة" data-en="Accurate cost estimation"><i class="fas fa-check"></i> تقدير دقيق للتكلفة</li>
+              <li data-ar="طرق شحن متعددة" data-en="Multiple shipping methods"><i class="fas fa-check"></i> طرق شحن متعددة</li>
+              <li data-ar="حساب الرسوم الجمركية" data-en="Customs fees calculation"><i class="fas fa-check"></i> حساب الرسوم الجمركية</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="service-card fade-in" data-delay="0.4s">
+            <div class="service-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3 class="service-title" data-ar="موارد تعليمية" data-en="Educational Resources">موارد تعليمية</h3>
+            <p data-ar="دليل شامل يشرح عملية الاستيراد، بالإضافة إلى فيديوهات تعليمية مفصلة وموارد قيّمة." data-en="Comprehensive guide book explaining the import process along with detailed video tutorials and resources.">دليل شامل يشرح عملية الاستيراد، بالإضافة إلى فيديوهات تعليمية مفصلة وموارد قيّمة.</p>
+            <ul class="service-features">
+              <li data-ar="دليل خطوة بخطوة" data-en="Step-by-step guidebook"><i class="fas fa-check"></i> دليل خطوة بخطوة</li>
+              <li data-ar="مكتبة فيديوهات تعليمية" data-en="Video tutorials library"><i class="fas fa-check"></i> مكتبة فيديوهات تعليمية</li>
+              <li data-ar="تحديثات منتظمة للمحتوى" data-en="Regular content updates"><i class="fas fa-check"></i> تحديثات منتظمة للمحتوى</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Why Choose Us Section -->
+  <section id="why-us" class="why-us section-padding bg-light" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <h2 data-ar="لماذا تختار دليلنا؟" data-en="Why Choose Our Directory?">لماذا تختار دليلنا؟</h2>
+        <p data-en="Save time, money, and stress with our comprehensive solution." data-ar="وفر الوقت والمال والتوتر مع حلنا الشامل." class="section-subtext">وفر الوقت والمال والتوتر مع حلنا الشامل.</p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="why-us-image fade-in">
+            <img src="images/Air-freight.jpg" alt="Container Ship" class="img-fluid rounded-4 shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="why-us-content slide-in-right">
+            <div class="why-us-item">
+              <div class="why-us-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="why-us-text">
+                <h3 data-ar="الموردين المعتمدين" data-en="Verified Suppliers">الموردين المعتمدين</h3>
+                <p data-en="All factories in our directory have been verified to ensure legitimacy and reliability." data-ar="تم التحقق من جميع المصانع الموجودة في دليلنا لضمان الشرعية والموثوقية.">تم التحقق من جميع المصانع الموجودة في دليلنا لضمان الشرعية والموثوقية.</p>
+              </div>
+            </div>
+            <div class="why-us-item">
+              <div class="why-us-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <div class="why-us-text">
+                <h3 data-en="Cost Efficiency" data-ar="كفاءة التكلفة">كفاءة التكلفة</h3>
+                <p data-en="Cut out middlemen and unnecessary fees by connecting directly with manufacturers." data-ar="قم بإزالة الوسطاء والرسوم غير الضرورية من خلال التواصل مباشرة مع الشركات المصنعة">قم بإزالة الوسطاء والرسوم غير الضرورية من خلال التواصل مباشرة مع الشركات المصنعة.</p>
+              </div>
+            </div>
+            <div class="why-us-item">
+              <div class="why-us-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="why-us-text">
+                <h3 data-en="Time Saving" data-ar="توفير الوقت">توفير الوقت</h3>
+                <p data-en="Save months of research with our pre-vetted directory of reliable factories." data-ar="وفر شهورًا من البحث مع دليلنا المعتمد مسبقًا للمصانع الموثوقة.">وفر شهورًا من البحث مع دليلنا المعتمد مسبقًا للمصانع الموثوقة.</p>
+              </div>
+            </div>
+            <div class="why-us-item">
+              <div class="why-us-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="why-us-text">
+                <h3 data-ar="الحد من المخاطر" data-en="Risk Reduction">الحد من المخاطر</h3>
+                <p data-en="Comprehensive guidance helps avoid common pitfalls and scams in international trade." data-ar="تساعد الإرشادات الشاملة على تجنب الأخطاء والاحتيالات الشائعة في التجارة الدولية.">تساعد الإرشادات الشاملة على تجنب الأخطاء والاحتيالات الشائعة في التجارة الدولية.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Pricing Section -->
+  <section id="pricing" class="pricing section-padding" data-aos="fade-in" data-aos-delay="100">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <h2 data-ar="خطط الأسعار" data-en="Pricing Plans">خطط الأسعار</h2>
+        <p class="section-subtext" data-ar="اختر الخطة المناسبة لاحتياجاتك واحصل على الوصول الكامل إلى خدماتنا المميزة" data-en="Choose the plan that suits your needs and get full access to our premium services">اختر الخطة المناسبة لاحتياجاتك واحصل على الوصول الكامل إلى خدماتنا المميزة</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card premium fade-in">
+           
+            <h3 data-ar="الباقة الأساسية" data-en="Basic Package">الباقة الأساسية</h3>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="price">20</span>
+              <span data-ar="شهريا" data-en="per month" class="period">شهريا</span>
+            </div>
+            <ul class="pricing-features">
+              <li data-en="Access to the factory directory (5 sectors)" data-ar="الوصول إلى دليل المصانع (5 قطاعات)"><i class="fas fa-check"></i> الوصول إلى دليل المصانع (5 قطاعات)</li>
+              <li data-en="List of top 3 shipping companies" data-ar="قائمة بأفضل 3 شركات شحن"><i class="fas fa-check"></i> قائمة بأفضل 3 شركات شحن</li>
+              <li data-en="Basic cost calculator" data-ar="حاسبة التكلفة الأساسية"><i class="fas fa-check"></i> حاسبة التكلفة الأساسية</li>
+              <li data-en="Access to the e-book" data-ar="وصول للكتاب الإلكتروني"><i class="fas fa-check"></i> وصول للكتاب الإلكتروني</li>
+              <li data-en="Email support" data-ar="دعم بالبريد الإلكتروني"><i class="fas fa-check"></i> دعم بالبريد الإلكتروني</li>
+            </ul>
+            <a data-ar="اشترك الان" data-en="Get Acess Now" href="#" class="btn btn-primary btn-lg w-100">اشترك الان</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card premium fade-in">
+            <div class="pricing-badge" data-ar="مُستَحسَن" data-en="RECOMMENDED">مُستَحسَن</div>
+            <h3 data-ar="الباقة الاحترافية" data-en="Professional Package">الباقة الاحترافية</h3>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="price">20</span>
+              <span data-ar="شهريا" data-en="per month" class="period">شهريا</span>
+            </div>
+            <ul class="pricing-features">
+              <li data-ar="الوصول إلى دليل المصانع(كل القطاعات)" data-en="Access to the factory directory(all sectors)"><i class="fas fa-check"></i>الوصول إلى دليل المصانع(كل القطاعات)</li>
+              <li data-ar="قائمة بأفضل 10 شركات شحن" data-en="List of top 10 shipping companies"><i class="fas fa-check"></i> قائمة بأفضل 10 شركات شحن</li>
+              <li data-ar="حاسبة التكلفة المتقدمة" data-en="Advanced cost calculator"><i class="fas fa-check"></i>حاسبة التكلفة المتقدمة</li>
+              <li data-ar="وصول للكتاب الإلكتروني والفيديوهات" data-en="Access to the e-book and videos"><i class="fas fa-check"></i> وصول للكتاب الإلكتروني والفيديوهات</li>
+              <li data-ar="دعم فني على مدار الساعة" data-en="24/7 technical support"><i class="fas fa-check"></i> دعم فني على مدار الساعة</li>
+            </ul>
+            <a data-ar="اشترك الان" data-en="Get Acess Now" href="#" class="btn btn-danger btn-lg w-100">اشترك الان</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card premium fade-in">
+           
+            <h3 data-ar="الباقة التجارية" data-en="Business Package">الباقة التجارية</h3>
+            <div class="pricing-price">
+              <span class="currency">$</span>
+              <span class="price">20</span>
+              <span data-ar="شهريا" data-en="per month" class="period">شهريا</span>
+            </div>
+            <ul class="pricing-features">
+              <li data-en="Unlimited access to all services" data-ar="وصول غير محدود لجميع الخدمات"><i class="fas fa-check"></i>وصول غير محدود لجميع الخدمات</li>
+              <li data-en="Custom sector reports" data-ar="تقارير مخصصة للقطاعات"><i class="fas fa-check"></i> تقارير مخصصة للقطاعات</li>
+              <li data-en="Exclusive discounts with shipping companies" data-ar="خصومات حصرية مع شركات الشحن"><i class="fas fa-check"></i>خصومات حصرية مع شركات الشحن</li>
+              <li data-en="All educational and training materials" data-ar="جميع المواد التعليمية والتدريبية"><i class="fas fa-check"></i> جميع المواد التعليمية والتدريبية</li>
+              <li data-en="Premium 24/7 technical support" data-ar="دعم فني متميز على مدار الساعة"><i class="fas fa-check"></i>دعم فني متميز على مدار الساعة</li>
+
+            </ul>
+            <a data-ar="اشترك الان" data-en="Get Acess Now" href="#" class="btn btn-primary btn-lg w-100">اشترك الان</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Payment Section -->
+      <section class="payment-section text-center section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-ar="طرق الدفع المتاحة" data-en="Available Payment Methods">طرق الدفع المتاحة</h2>
+            <p class="section-subtext" data-en="We provide multiple secure payment methods for your convenience" data-ar="نوفر لك طرق دفع متعددة وآمنة لراحتك">نوفر لك طرق دفع متعددة وآمنة لراحتك</p>
+          </div>
+          <div class="payment-methods row g-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="col-md-6 col-lg-4 col-xl-3">
+               <div class="payment-method d-flex flex-column gap-3">
+                  <div class="payment-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                  </div>
+                  <h4 data-ar="بطاقات الائتمان" data-en="Credit Cards">بطاقات الائتمان</h4>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="payment-method d-flex flex-column gap-3">
+                  <div class="payment-icon">
+                    <i class="fa-solid fa-building-columns"></i> <!-- Bank Transfer -->
+                  </div>
+                  <h4 data-ar="تحويل بنكي" data-en="Bank Transfer">تحويل بنكي</h4>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="payment-method d-flex flex-column gap-3">
+                  <div class="payment-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i> <!-- InstaPay / Mobile Transfer -->
+                  </div>
+                  <h4 data-ar="انستا باي" data-en="InstaPay">انستا باي</h4>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="payment-method d-flex flex-column gap-3 ">
+                    <div class="payment-icon">
+                      <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <h4 data-ar="دفع عبر QR" data-en="Pay with QR">دفع عبر QR</h4>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- FAQ Section -->
+  <section id="faq" class="faq section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2>
+        <p class="section-subtext" data-en="Find answers to the most common questions about our services." data-ar="ابحث عن إجابات للأسئلة الأكثر شيوعًا حول خدماتنا.">ابحث عن إجابات للأسئلة الأكثر شيوعًا حول خدماتنا.</p>
+      </div>
+      <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-lg-10">
+          <div class="accordion fade-in" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" data-ar="ما مدى حداثة معلومات دليل المصنع؟" data-en="How current is the factory directory information?">
+                 ما مدى حداثة معلومات دليل المصنع؟
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-ar="يتم تحديث دليلنا ربع سنويًا لضمان تحديث جميع المعلومات ودقتها. نتحقق من بيانات الاتصال والمواقع الإلكترونية والعناوين لجميع المصانع لضمان أعلى مستوى من الموثوقية." data-en="Our directory is updated quarterly to ensure all information remains current and accurate. We verify contact details, websites, and addresses for all factories to maintain the highest level of reliability.">
+                   يتم تحديث دليلنا ربع سنويًا لضمان تحديث جميع المعلومات ودقتها. نتحقق من بيانات الاتصال والمواقع الإلكترونية والعناوين لجميع المصانع لضمان أعلى مستوى من الموثوقية.                
+                </div>
+              </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" data-en="Is there a subscription fee or just a one-time payment?" data-ar="هل هناك رسوم اشتراك أم مجرد دفع لمرة واحدة؟">
+                  هل هناك رسوم اشتراك أم مجرد دفع لمرة واحدة؟
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-ar="نقدم نموذج دفع لمرة واحدة للوصول مدى الحياة. لا توجد رسوم متكررة أو رسوم خفية. بمجرد الشراء، ستتمكن من الوصول إلى جميع الموارد الحالية والتحديثات المستقبلية." data-en="We offer a one-time payment model for lifetime access. There are no recurring fees or hidden charges. Once you purchase, you'll have access to all current resources and future updates.">
+                  نقدم نموذج دفع لمرة واحدة للوصول مدى الحياة. لا توجد رسوم متكررة أو رسوم خفية. بمجرد الشراء، ستتمكن من الوصول إلى جميع الموارد الحالية والتحديثات المستقبلية.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" data-en=" How accurate is the import cost calculator?" data-ar="ما مدى دقة حاسبة تكلفة الاستيراد؟">
+                 ما مدى دقة حاسبة تكلفة الاستيراد؟
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-ar="عادةً ما تكون دقة حاسبة تكاليف الاستيراد لدينا تتراوح بين ٢٪ و٥٪ من التكلفة الفعلية. وتراعي هذه الحاسبة طريقة الشحن، وفئة المنتج، والوزن، والأبعاد، وبلد المقصد، والرسوم الجمركية، والرسوم الإضافية، لإجراء حساب شامل." data-en="Our import cost calculator is typically accurate within 2-5% of actual costs. It factors in shipping method, product category, weight, dimensions, destination country, customs duties, and additional fees for a comprehensive calculation.">
+                  عادةً ما تكون دقة حاسبة تكاليف الاستيراد لدينا تتراوح بين ٢٪ و٥٪ من التكلفة الفعلية. وتراعي هذه الحاسبة طريقة الشحن، وفئة المنتج، والوزن، والأبعاد، وبلد المقصد، والرسوم الجمركية، والرسوم الإضافية، لإجراء حساب شامل.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" data-en="Can I get a refund if I'm not satisfied?" data-ar="هل يمكنني الحصول على استرداد إذا لم أكن راضيًا؟">
+                  هل يمكنني الحصول على استرداد إذا لم أكن راضيًا؟
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-ar="نعم، نقدم ضمان استرداد الأموال لمدة ٣٠ يومًا. إذا لم تكن راضيًا تمامًا عن خدماتنا خلال أول ٣٠ يومًا من الشراء، فسنرد لك المبلغ كاملًا دون أي أسئلة." data-en="Yes, we offer a 30-day money-back guarantee. If you're not completely satisfied with our services within the first 30 days of purchase, we'll issue a full refund, no questions asked.">
+                  نعم، نقدم ضمان استرداد الأموال لمدة ٣٠ يومًا. إذا لم تكن راضيًا تمامًا عن خدماتنا خلال أول ٣٠ يومًا من الشراء، فسنرد لك المبلغ كاملًا دون أي أسئلة.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" data-en="What industries are covered in the factory directory?" data-ar="ما هي الصناعات التي يغطيها دليل المصانع؟">
+                  ما هي الصناعات التي يغطيها دليل المصانع؟
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Our directory covers 32 major industrial sectors including electronics, textiles, furniture, automotive parts, toys, home goods, kitchenware, beauty products, sports equipment, packaging, medical supplies, and many more." data-ar="يغطي دليلنا 32 قطاعًا صناعيًا رئيسيًا بما في ذلك الإلكترونيات والمنسوجات والأثاث وقطع غيار السيارات والألعاب والسلع المنزلية وأدوات المطبخ ومنتجات التجميل والمعدات الرياضية والتعبئة والتغليف والإمدادات الطبية وغير ذلك الكثير.">
+                  يغطي دليلنا ٣٢ قطاعًا صناعيًا رئيسيًا بما في ذلك الإلكترونيات والمنسوجات والأثاث وقطع غيار السيارات والألعاب والسلع المنزلية وأدوات المطبخ ومنتجات التجميل والمعدات الرياضية والتعبئة والتغليف والإمدادات الطبية وغير ذلك الكثير.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- CTA Section -->
+  <section class="cta section-padding bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center" data-aos="fade" data-aos-delay="100">
+        <div class="col-lg-8 fade-in">
+          <h2 data-en="Ready to streamline your import business?" data-ar="هل أنت مستعد لتبسيط أعمال الاستيراد الخاصة بك؟">هل أنت مستعد لتبسيط أعمال الاستيراد الخاصة بك؟</h2>
+          <p class="lead" data-ar="احصل على إمكانية الوصول الفوري إلى دليلنا الشامل وابدأ في الاتصال بالمصانع المعتمدة اليوم." data-en="Get instant access to our comprehensive directory and start connecting with verified factories today.">احصل على إمكانية الوصول الفوري إلى دليلنا الشامل وابدأ في الاتصال بالمصانع المعتمدة اليوم.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end slide-in-right mt-5 mt-lg-0">
+          <a href="#pricing" class="btn btn-danger btn-lg" data-ar="اشترك الان" data-en="Get Access Now">اشترك الان</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 data-ar="هل لديك أسئلة؟" data-en="Have Questions?">هل لديك أسئلة؟</h2>
+        <p class="section-subtext" data-en="Get in touch with our support team for personalized assistance." data-ar="تواصل مع فريق الدعم لدينا للحصول على مساعدة شخصية.">تواصل مع فريق الدعم لدينا للحصول على مساعدة شخصية.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
+            <div class="box p-5">
+                <form action="" class="row g-4" id="contactForm">
+                    <div class="col-md-6">
+                      <input class="w-100 input-name" type="text" name="UserName" data-en-placeholder="Enter your name" data-ar-placeholder="أدخل اسمك" placeholder="أدخل اسمك" id="UserName">
+                      <p class="text-danger small m-0" id="nameError"></p>
+                    </div>
+                    <div class="col-md-6">
+                      <input class="w-100" type="email" name="UserEmail" data-en-placeholder="Enter your email" data-ar-placeholder="أدخل بريدك الإلكتروني" placeholder="أدخل بريدك الإلكتروني" id="UserEmail">
+                      <p class="text-danger small m-0" id="emailError"></p>
+                    </div>
+                    <div class="col-12">
+                      <textarea class="w-100" name="message" data-en-placeholder="Enter your message" data-ar-placeholder="أدخل رسالتك" placeholder="أدخل رسالتك" id="message"></textarea>
+                      <p class="text-danger small m-0" id="messageError"></p>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                      <button type="submit" class="text-white btn btn-primary  text-capitalize" data-ar="ارسل الان" data-en="Send Now">ارسل الان</button>
+                    </div>
+                    <p id="formSuccess" class="text-success text-center d-none mt-3">تم ارسال الرسالة</p>
+                  </form>
+                  
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3> 
+              <span class="brand-text" data-en="Importers" data-ar="دليل"> دليل</span>
+              <span class="brand-text-accent" data-en="Guide" data-ar="المستوردين">المستوردين</span>
+          </h3>
+          <p data-ar="دليل متميز للمصانع الصينية وحلول الاستيراد الشاملة للشركات في جميع أنحاء العالم." data-en="Premium directory of Chinese factories and comprehensive import solutions for businesses worldwide.">دليل متميز للمصانع الصينية وحلول الاستيراد الشاملة للشركات في جميع أنحاء العالم.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+            <li><a href="#services" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+            <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">الأسعار</a></li>
+            <li><a href="#faq" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+            <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+          <h5 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h5>
+          <ul class="footer-links">
+            <li><a data-ar="دليل المصنع" data-en="Factory Directory" href="#">دليل المصنع</a></li>
+            <li><a data-ar="دليل الشحن" data-en="Shipping Directory" href="#">دليل الشحن</a></li>
+            <li><a data-ar="حاسبة تكلفة الاستيراد" data-en="Import Cost Calculator" href="#">حاسبة تكلفة الاستيراد</a></li>
+            <li><a data-ar="الموارد التعليمية" data-en="Educational Resources" href="#">الموارد التعليمية</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 data-ar="معلومات الاتصال" data-en="Contact Info">معلومات الاتصال</h5>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@globaltradeconnect.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="row footer-bottom">
+        <div class="col-md-6">
+          <p data-ar="جميع الحقوق محفوظة لشركة دليل المستوردين لعام ٢٠٢٥." data-en="&copy; 2025 Importers Guide. All Rights Reserved.">جميع الحقوق محفوظة لشركة دليل المستوردين لعام ٢٠٢٥.</p>
+        </div>
+        <div class="col-md-6 end-text">
+           <div class="d-flex justify-content-center align-items-center gap-2">
+                  <span class="text-center" data-en="Design and programming by" data-ar="تصميم وبرمجه">تصميم وبرمجه </span>
+                  <div class="gmt-logo">
+                    <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL" target="_blank" class=""><img src="images/GMT.png" alt="GMT logo" class="GMT"></a>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <h3 class="modal-title"></h3>
+    <p class="modal-description"></p>
+    <ul class="modal-list"></ul>
+    <button class="close-modal">×</button>
+  </div>
+</div>
+
+
+</main>
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
