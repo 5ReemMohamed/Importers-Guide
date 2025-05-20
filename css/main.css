@@ -252,10 +252,14 @@ html[dir="ltr"] .section-header h2{
   color: var(--white);
   line-height: 1.4;
 }
-
+.chinese{
+  color: var(--danger);
+}
 .hero-text .lead {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  max-width: 530px;
+  line-height: 1.8;
 }
 
 .hero-btns {
@@ -264,8 +268,27 @@ html[dir="ltr"] .section-header h2{
 
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  gap: .8rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.35),
+    rgba(25, 25, 50, 0.45)
+  );
+  padding: 20px 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 450px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.hero-stats:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
 
 .stat-item {
   display: flex;
@@ -273,14 +296,14 @@ html[dir="ltr"] .section-header h2{
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent);
   line-height: 1;
 }
 
 .stat-text {
-  font-size: 0.875rem;
+  font-size: 0.755rem;
   color: var(--gray-200);
 }
 
@@ -846,6 +869,7 @@ footer .gmt-logo{
   .accordion-button {
     font-size: 16px;
 }
+
 }
 @media screen and (min-width : 768px) {
   html[dir="ltr"] .section-header h2{
@@ -855,8 +879,11 @@ footer .gmt-logo{
   content: '';
   left: -14px;
 }
+.hero-stats {
+  gap: 3rem;
+}
 .btn{
-  padding: 0.625rem 1.7rem;
+  padding: 0.625rem 3rem;
 }
 }
 @media screen and (min-width : 992px) {
@@ -880,7 +907,7 @@ footer .gmt-logo{
   color: var(--accent) !important;
 }
 .pricing-btn{
-     padding: 0.625rem .4rem;
+     padding: 0.625rem .8rem;
 }
 .hero-text h1 {
   font-size: 3.25rem;
