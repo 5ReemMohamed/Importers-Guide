@@ -74,55 +74,59 @@ document.addEventListener('DOMContentLoaded', function () {
     updateErrorMessages(newLang);
   });
 
-  // Sticky header
-const header = document.querySelector('#header');
-const headerHeight = header.offsetHeight;
-const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-const sections = Array.from(navLinks).map(link => {
-  const id = link.getAttribute('href');
-  return id.startsWith('#') ? document.querySelector(id) : null;
-}).filter(Boolean);
+ 
+  const header = document.querySelector('#header');
+  const headerHeight = header.offsetHeight;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const sections = Array.from(navLinks).map(link => {
+    const id = link.getAttribute('href');
+    return id.startsWith('#') ? document.querySelector(id) : null;
+  }).filter(Boolean);
 
-window.addEventListener('scroll', () => {
-  // Toggle sticky header
-  header.classList.toggle('sticky', window.scrollY > 50);
+  function handleScroll() {
+    
+    header.classList.toggle('sticky', window.scrollY > 50);
 
-  // Get current scroll position + header offset
-  const scrollPos = window.scrollY + headerHeight + 5; // +5 for small offset
+    
+    const scrollPos = window.scrollY + headerHeight + 5; 
 
-  let currentSection = null;
+    let currentSection = null;
 
-  for (const section of sections) {
-    if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
-      currentSection = section;
-      break;
+    for (const section of sections) {
+      if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
+        currentSection = section;
+        break;
+      }
     }
+
+    navLinks.forEach(link => {
+      if (currentSection && link.getAttribute('href') === `#${currentSection.id}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 
-  navLinks.forEach(link => {
-    if (currentSection && link.getAttribute('href') === `#${currentSection.id}`) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-});
+  window.addEventListener('scroll', handleScroll);
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href');
-    if (targetId === '#') return;
-    const targetElement = document.querySelector(targetId);
-    if (!targetElement) return;
+  handleScroll();
 
-    window.scrollTo({
-      top: targetElement.offsetTop - headerHeight,
-      behavior: 'smooth'
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+
+      window.scrollTo({
+        top: targetElement.offsetTop - headerHeight,
+        behavior: 'smooth'
+      });
     });
   });
-});
 
   // Back to Top
   const backToTopButton = document.querySelector('.back-to-top');
@@ -139,24 +143,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 
-  // Intersection Observer animations
-  const animatedElements = document.querySelectorAll('.fade-in, .slide-in-right, .slide-in-left, .slide-in-up, .scale-in');
 
-  const animationObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        animationObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  animatedElements.forEach(element => {
-    element.style.animationPlayState = 'paused';
-    animationObserver.observe(element);
-  });
 
   function validateAll() {
     let isValid = true;
@@ -235,7 +222,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   }
 
-    // AOS Init
+  // AOS Init
   AOS.init({
     offset: 120,
     duration: 1000,
