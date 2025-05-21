@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const isRTL = lang === 'ar';
 
     if (validationErrors.name) {
-      nameError.textContent = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
+      nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
     }
 
     if (validationErrors.email) {
-      emailError.textContent = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
+      emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
     }
 
     if (validationErrors.message) {
-      messageError.textContent = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
+      messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
     }
   }
 
@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
         el.appendChild(icon);
         el.append(' ' + text);
       } else {
-        el.textContent = text;
+        el.innerHTML = text;
       }
     });
 
-    langSwitchBtn.textContent = newLang === 'ar' ? 'EN' : 'AR';
+    langSwitchBtn.innerHTML = newLang === 'ar' ? 'EN' : 'AR';
     langSwitchBtn.setAttribute('data-lang', newLang);
 
     document.documentElement.setAttribute('lang', newLang);
@@ -128,6 +128,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+     
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+    
+    let endTime = localStorage.getItem('countdownEndTime');
+    
+    if (!endTime || new Date(parseInt(endTime)) <= new Date()) {
+        endTime = new Date().getTime() + (24 * 60 * 60 * 1000); 
+        localStorage.setItem('countdownEndTime', endTime);
+    }
+   
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    
+   
+    updateCountdown();
+    
+   
+    function updateCountdown() {
+        
+        const now = new Date().getTime();
+        const distance = parseInt(endTime) - now;
+        
+        if (distance <= 0) {  
+            endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            localStorage.setItem('countdownEndTime', endTime);
+            
+           
+            flashCountdown();
+        }
+        
+       
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        hoursElement.innerHTML = formatTime(hours);
+        minutesElement.innerHTML = formatTime(minutes);
+        secondsElement.innerHTML = formatTime(seconds);
+    }
+    
+    function formatTime(time) {
+        return time < 10 ? `0${time}` : time;
+    }
+    
+   
+    function flashCountdown() {
+        const countdownItems = document.querySelectorAll('.countdown-item');
+        
+        // Add flash animation class
+        countdownItems.forEach(item => {
+            item.classList.add('shake');
+            
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                item.classList.remove('shake');
+            }, 1000);
+        });
+    }
+
   // Back to Top
   const backToTopButton = document.querySelector('.back-to-top');
 
@@ -156,30 +216,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (name.length < 3) {
       validationErrors.name = true;
-      nameError.textContent = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
+      nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
       isValid = false;
     } else {
       validationErrors.name = false;
-      nameError.textContent = "";
+      nameError.innerHTML = "";
     }
 
     const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     if (!emailRegex.test(email)) {
       validationErrors.email = true;
-      emailError.textContent = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
+      emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
       isValid = false;
     } else {
       validationErrors.email = false;
-      emailError.textContent = "";
+      emailError.innerHTML = "";
     }
 
     if (message.length < 10) {
       validationErrors.message = true;
-      messageError.textContent = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
+      messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
       isValid = false;
     } else {
       validationErrors.message = false;
-      messageError.textContent = "";
+      messageError.innerHTML = "";
     }
 
     return isValid;
@@ -206,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem("contactFormData", JSON.stringify(formData));
 
         if (successMessage) {
-          successMessage.textContent = isRTL ? "تم إرسال الرسالة بنجاح." : "Message sent successfully.";
+          successMessage.innerHTML = isRTL ? "تم إرسال الرسالة بنجاح." : "Message sent successfully.";
           successMessage.classList.remove("d-none");
         }
 

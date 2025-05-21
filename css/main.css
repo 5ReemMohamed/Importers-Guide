@@ -23,7 +23,7 @@
   --body-font: 'Poppins', sans-serif;
   --body-color: #212529;
   --heading-color: #0A2463;
-  --transition: all 0.3s ease;
+  --transition: all 0.5s ease-in-out;
   --box-shadow: 0 8px 24px rgba(10, 36, 99, 0.1);
   --box-shadow-hover: 0 16px 32px rgba(10, 36, 99, 0.15);
   --border-radius: 8px;
@@ -253,7 +253,7 @@ html[dir="ltr"] .section-header h2{
   line-height: 1.4;
 }
 .chinese{
-  color: var(--danger);
+  color: var(--danger) !important;
 }
 .hero-text .lead {
   font-size: 1.25rem;
@@ -266,45 +266,41 @@ html[dir="ltr"] .section-header h2{
   margin-bottom: 3.5rem;
 }
 
+
 .hero-stats {
   display: flex;
-  gap: .8rem;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.35),
-    rgba(25, 25, 50, 0.45)
-  );
-  padding: 20px 25px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  max-width: 450px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
 }
-
-.hero-stats:hover {
-  transform: scale(1.04);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
 
 .stat-item {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: var(--space-4);
+  border-radius: var(--border-radius);
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+  animation: float 4s ease-in-out infinite;
+}
+
+.stat-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
 }
 
 .stat-number {
-  font-size: 1.5rem;
-  font-weight: 600;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--accent);
-  line-height: 1;
 }
 
 .stat-text {
-  font-size: 0.755rem;
-  color: var(--gray-200);
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .hero-image img {
@@ -466,9 +462,59 @@ html[dir="ltr"] .section-header h2{
 font-size: 15px;
 }
 /* Pricing Section */
+
+.limited-offer {
+ background-color: rgba(220, 53, 69, 0.2);
+  border-radius: var(--border-radius);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+  position: relative;
+}
+
+.offer-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--danger);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: var(--space-4);
+  min-width: 80px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.countdown-item span:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
 .pricing-card {
   background-color: var(--white);
-  height: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 48px 32px;
@@ -510,24 +556,57 @@ html[dir="ltr"] .pricing-badge {
 }
 
 .pricing-price {
-  margin-bottom: 24px;
+  position: relative;
+  padding: var(--space-4) 0;
+  margin-bottom: var(--space-5);
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+
+
+.discount-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(30px, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .pricing-price .currency {
   font-size: 1.5rem;
-  font-weight: 600;
-  vertical-align: top;
-  position: relative;
-  top: 0.5rem;
+  font-weight: 400;
+  vertical-align: super;
 }
 
 .pricing-price .price {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--primary);
   line-height: 1;
 }
-
+.original-price {
+  font-size: 1.5rem;
+  color: var(--gray-800) !important;
+  opacity: 0.6;
+}
+.current-price {
+  color: var(--primary);
+}
+.original{
+  text-decoration-line: line-through;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+}
+.payment-note {
+  font-size: 0.9rem;
+  color: var(--danger);
+  margin-top: var(--space-1);
+  font-weight: 600;
+}
 .pricing-price .period {
   font-size: 0.875rem;
   color: var(--gray-600);
@@ -539,6 +618,7 @@ html[dir="ltr"] .pricing-badge {
   padding-left: 0;
   list-style: none;
   margin-bottom: 32px;
+  margin-top: 13px;
 
 }
 html[dir="ltr"] .pricing-features{
@@ -916,4 +996,34 @@ footer .gmt-logo{
   padding: 0;
  
 }
+}
+
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
 }
